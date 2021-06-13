@@ -21,7 +21,9 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', [App\Http\Controllers\JtweetController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\JtweetController::class, 'show'])->name('top');
+
+Route::get('/top', [App\Http\Controllers\JtweetController::class, 'show']);
 
 Route::get('/jtweet/{id}', [App\Http\Controllers\JtweetController::class, 'show']);
 
